@@ -6,10 +6,12 @@
 #
 set -eou pipefail
 
-readonly project_name=terraform-<PROVIDER>-<NAME>
+readonly project_name=terraform-oci-iam-user
 
 TEST_CASES=(
-  examples/default
+  examples/default-iam-user
+  examples/custom-iam-user
+  examples/skip-creation-iam-user
 )
 
 log() {

@@ -1,5 +1,5 @@
 locals {
-  user_name = length(var.user_name) > 0 ? var.user_name : "${var.base_name}_user"
+  user_name  = length(var.user_name) > 0 ? var.user_name : "${var.base_name}_user"
   group_name = length(var.group_name) > 0 ? var.group_name : "${var.base_name}_group"
 }
 
