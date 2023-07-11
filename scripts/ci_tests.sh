@@ -24,8 +24,9 @@ warn() {
 }
 
 export_oci_credentials() {
-  echo $OCI_PRIVATE_KEY | wc
-  echo $OCI_PRIVATE_KEY > $private_key_file_name
+  # This is necessary because environment variables with newlines in them are
+  # hard to store in Codefresh.
+  echo $OCI_PRIVATE_KEY | sed 's/%/\r\n/g' > $private_key_file_name
   export TF_VAR_private_key_path=$(pwd)/${private_key_file_name}
 }
 
