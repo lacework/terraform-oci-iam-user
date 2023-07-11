@@ -7,6 +7,7 @@
 set -eou pipefail
 
 readonly project_name=terraform-oci-iam-user
+private_key_file_name=oci_private_key.pem
 
 TEST_CASES=(
   examples/default-iam-user
@@ -20,6 +21,15 @@ log() {
 
 warn() {
   echo "xxx ${project_name}: $1" >&2
+}
+
+export_oci_credentials() {
+  echo $OCI_PRIVATE_KEY > $private_key_file_name
+  export TF_VAR_private_key_path=$(pwd)/${private_key_file_name}
+}
+
+cleanup_oci_credentials() {
+  rm ${private_key_file_name}
 }
 
 integration_tests() {
@@ -40,7 +50,9 @@ lint_tests() {
 
 main() {
   lint_tests
+  export_oci_credentials
   integration_tests
+  cleanup_oci_credentials
 }
 
 main || exit 99
