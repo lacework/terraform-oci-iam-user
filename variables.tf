@@ -13,12 +13,6 @@ variable "create" {
   description = "Set to false to prevent module from creating any resources"
 }
 
-variable "defined_tags" {
-  type        = map(any)
-  default     = {}
-  description = "defined tags for the resources created for Lacework integration"
-}
-
 variable "freeform_tags" {
   type        = map(any)
   default     = {}

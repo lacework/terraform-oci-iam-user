@@ -9,7 +9,6 @@ resource "oci_identity_user" "lacework_user" {
   compartment_id = var.tenancy_id
   description    = "Identity user used for Lacework integration"
   name           = local.user_name
-  defined_tags   = var.defined_tags
   email          = var.email
   freeform_tags  = var.freeform_tags
 }
@@ -29,7 +28,6 @@ resource "oci_identity_group" "lacework_group" {
   compartment_id = var.tenancy_id
   description    = "Identity group for the Lacework integration user"
   name           = local.group_name
-  defined_tags   = var.defined_tags
   freeform_tags  = var.freeform_tags
 }
 
