@@ -1,10 +1,15 @@
 terraform {
-  required_version = ">= 0.12.31"
+  required_version = ">= 0.14"
 
   required_providers {
-    lacework = {
-      source  = "lacework/lacework"
-      version = "~> 1.0"
+    oci = {
+      source  = "oracle/oci"
+      version = ">= 5.3.0"
+    }
+
+    tls = {
+      source = "hashicorp/tls"
+      version = ">= 4.0.0"
     }
   }
 }
