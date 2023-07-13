@@ -2,7 +2,7 @@ module "lacework_iam_user" {
   source = "../.."
   tenancy_id = var.tenancy_ocid
   email = "example@example.com"
-	base_name = "lacework_test"
+	name_prefix = "lacework_test"
 }
 
 variable "tenancy_ocid" {

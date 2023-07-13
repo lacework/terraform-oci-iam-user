@@ -24,20 +24,20 @@ variable "freeform_tags" {
   description = "freeform tags for the resources created for Lacework integration"
 }
 
-variable "base_name" {
+variable "name_prefix" {
   type        = string
   default     = "lacework_security_integration"
-  description = "Names for the created resources will be $${base_name}_{user,group}"
+  description = "Names for the created resources will be $${name_prefix}_{user,group}"
 }
 
 variable "user_name" {
   type        = string
   default     = ""
-  description = "Name of the IAM user used for Lacework integration (overrides base_name)"
+  description = "Name of the IAM user used for Lacework integration (overrides name_prefix)"
 }
 
 variable "group_name" {
   type        = string
   default     = ""
-  description = "Name of the identity group for the Lacework user (overrides base_name)"
+  description = "Name of the identity group for the Lacework user (overrides name_prefix)"
 }

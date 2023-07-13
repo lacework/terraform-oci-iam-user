@@ -1,6 +1,6 @@
 locals {
-  user_name  = length(var.user_name) > 0 ? var.user_name : "${var.base_name}_user"
-  group_name = length(var.group_name) > 0 ? var.group_name : "${var.base_name}_group"
+  user_name  = length(var.user_name) > 0 ? var.user_name : "${var.name_prefix}_user"
+  group_name = length(var.group_name) > 0 ? var.group_name : "${var.name_prefix}_group"
 }
 
 resource "oci_identity_user" "lacework_user" {
