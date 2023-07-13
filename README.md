@@ -44,7 +44,7 @@ No modules.
 |------|-------------|------|---------|:--------:|
 | <a name="input_base_name"></a> [base\_name](#input\_base\_name) | Names for the created resources will be ${base\_name}\_{user,group} | `string` | `"lacework_security_integration"` | no |
 | <a name="input_create"></a> [create](#input\_create) | Set to false to prevent module from creating any resources | `bool` | `true` | no |
-| <a name="input_email"></a> [email](#input\_email) | Optional email associated with the created user | `string` | `"lacework@lacework.net"` | no |
+| <a name="input_email"></a> [email](#input\_email) | Email associated with the created user | `string` | n/a | yes |
 | <a name="input_freeform_tags"></a> [freeform\_tags](#input\_freeform\_tags) | freeform tags for the resources created for Lacework integration | `map(any)` | `{}` | no |
 | <a name="input_group_name"></a> [group\_name](#input\_group\_name) | Name of the identity group for the Lacework user (overrides base\_name) | `string` | `""` | no |
 | <a name="input_tenancy_id"></a> [tenancy\_id](#input\_tenancy\_id) | OCID of the OCI tenancy to be integrated with Lacework | `string` | n/a | yes |
