@@ -37,15 +37,15 @@ resource "oci_identity_user_group_membership" "lacework_user_group_membership" {
   user_id  = oci_identity_user.lacework_user[count.index].id
 }
 
-resource "tls_private_key" "rsa_key" { 
-  count = var.create ? 1 : 0
+resource "tls_private_key" "rsa_key" {
+  count     = var.create ? 1 : 0
   algorithm = "RSA"
-  rsa_bits = 4096
+  rsa_bits  = 4096
 }
 
 resource "oci_identity_api_key" "lacework_api_key" {
-  count = var.create ? 1 : 0
-  user_id = oci_identity_user.lacework_user[count.index].id
+  count     = var.create ? 1 : 0
+  user_id   = oci_identity_user.lacework_user[count.index].id
   key_value = tls_private_key.rsa_key[count.index].public_key_pem
 }
 

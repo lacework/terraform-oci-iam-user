@@ -1,11 +1,11 @@
 module "lacework_iam_user" {
-  source = "../.."
+  source     = "../.."
   tenancy_id = var.tenancy_ocid
-  email = "example@example.com"
-  create = false
+  email      = "example@example.com"
+  create     = false
 }
 
 variable "tenancy_ocid" {
-  type = string
+  type        = string
   description = "OCID of the tenancy to be integrated with Lacework"
 }
