@@ -7,7 +7,7 @@
 
 A Terraform Module to create a user and group to be used to integrate and OCI
 cloud account with Lacework.
-
+<!-- BEGIN_TF_DOCS -->
 ## Requirements
 
 | Name | Version |
@@ -61,3 +61,4 @@ No modules.
 | <a name="output_user_ocid"></a> [user\_ocid](#output\_user\_ocid) | OCID of the user created for the Lacework integration |
 | <a name="output_user_private_key_pem"></a> [user\_private\_key\_pem](#output\_user\_private\_key\_pem) | The private key of the API key of the user created for integration |
 | <a name="output_user_public_key_fingerprint"></a> [user\_public\_key\_fingerprint](#output\_user\_public\_key\_fingerprint) | The public key fingerprint of the API key created for integration |
+<!-- END_TF_DOCS -->
