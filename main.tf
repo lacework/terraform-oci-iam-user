@@ -48,5 +48,3 @@ resource "oci_identity_api_key" "lacework_api_key" {
   user_id   = oci_identity_user.lacework_user[count.index].id
   key_value = tls_private_key.rsa_key[count.index].public_key_pem
 }
-
-# Use public_key_fingerprint_md5, private_key_pem, public_key_pem 
