@@ -26,7 +26,7 @@ variable "freeform_tags" {
 
 variable "name_prefix" {
   type        = string
-  default     = "lacework_security_integration"
+  default     = "lw_"
   description = "Names for the created resources will be $${name_prefix}_{user,group}"
 }
 
