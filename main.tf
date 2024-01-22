@@ -1,6 +1,9 @@
 locals {
   user_name  = length(var.user_name) > 0 ? var.user_name : "${var.name_prefix}_user"
   group_name = length(var.group_name) > 0 ? var.group_name : "${var.name_prefix}_group"
+  version_file   = "${abspath(path.module)}/VERSION"
+  module_name    = basename(abspath(path.module))
+  module_version = fileexists(local.version_file) ? file(local.version_file) : ""
 }
 
 resource "oci_identity_user" "lacework_user" {
@@ -47,4 +50,9 @@ resource "oci_identity_api_key" "lacework_api_key" {
   count     = var.create ? 1 : 0
   user_id   = oci_identity_user.lacework_user[count.index].id
   key_value = tls_private_key.rsa_key[count.index].public_key_pem
+}
+
+data "lacework_metric_module" "lwmetrics" {
+  name    = local.module_name
+  version = local.module_version
 }
