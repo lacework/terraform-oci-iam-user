@@ -11,5 +11,10 @@ terraform {
       source  = "hashicorp/tls"
       version = ">= 4.0.0"
     }
+
+    lacework = {
+      source  = "lacework/lacework"
+      version = "~> 1.18"
+    }
   }
 }
