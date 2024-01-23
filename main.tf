@@ -2,7 +2,7 @@ locals {
   user_name  = length(var.user_name) > 0 ? var.user_name : "${var.name_prefix}_user"
   group_name = length(var.group_name) > 0 ? var.group_name : "${var.name_prefix}_group"
   version_file   = "${abspath(path.module)}/VERSION"
-  module_name    = basename(abspath(path.module))
+  module_name    = "terraform-oci-iam-user"
   module_version = fileexists(local.version_file) ? file(local.version_file) : ""
 }
 
