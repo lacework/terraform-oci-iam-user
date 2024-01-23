@@ -1,6 +1,6 @@
 # Release Notes
-Another day, another release. These are the release notes for the version `v0.3.2`.
+Another day, another release. These are the release notes for the version `v0.3.3`.
 
 ## Other Changes
-* chore: add lacework_metric_module datasource (#13) (Darren)([5b62d04](https://github.com/lacework/terraform-oci-iam-user/commit/5b62d04fe1e0df1f8b2e04ea9d8e5a529cb2ebce))
-* ci: version bump to v0.3.2-dev (Lacework)([62d940f](https://github.com/lacework/terraform-oci-iam-user/commit/62d940f9e477bb76fc328c205f4e7a885e63f4a7))
+* chore: set local var module name (#15) (Darren)([b238766](https://github.com/lacework/terraform-oci-iam-user/commit/b238766a9020a46f51dcff24abd3abca2a26d1c3))
+* ci: version bump to v0.3.3-dev (Lacework)([af5d543](https://github.com/lacework/terraform-oci-iam-user/commit/af5d5430b7ed747ea2646311694f31c8f1207f02))
