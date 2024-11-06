@@ -14,7 +14,7 @@ cloud account with Lacework.
 | Name | Version |
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 0.14 |
-| <a name="requirement_lacework"></a> [lacework](#requirement\_lacework) | ~> 1.18 |
+| <a name="requirement_lacework"></a> [lacework](#requirement\_lacework) | ~> 2.0 |
 | <a name="requirement_oci"></a> [oci](#requirement\_oci) | >= 5.3.0 |
 | <a name="requirement_tls"></a> [tls](#requirement\_tls) | >= 4.0.0 |
 
@@ -22,7 +22,7 @@ cloud account with Lacework.
 
 | Name | Version |
 |------|---------|
-| <a name="provider_lacework"></a> [lacework](#provider\_lacework) | ~> 1.18 |
+| <a name="provider_lacework"></a> [lacework](#provider\_lacework) | ~> 2.0 |
 | <a name="provider_oci"></a> [oci](#provider\_oci) | >= 5.3.0 |
 | <a name="provider_tls"></a> [tls](#provider\_tls) | >= 4.0.0 |
 
